@@ -1,0 +1,14 @@
+<h2>Resumen del formulario</h2>
+
+<ul>
+    <li>Nombre: {{ page_a_data.primer_nombre }} {{ page_a_data.apellido }}</li>
+    <li>Dirección: {{ page_b_data.direccion }}</li>
+    <li>Número de teléfono: {{ page_b_data.celular }}</li>
+    <li>Correo electrónico: {{ page_b_data.correo }}</li>
+    <li>Comentarios: {{ page_c_data.comentario }}</li>
+</ul>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirmar y enviar</button>
+</form>
